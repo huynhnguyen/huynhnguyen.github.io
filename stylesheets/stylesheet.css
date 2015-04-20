@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box; }
-
+html{
+  font-size: 14px;
+}
 body {
   padding: 0;
   margin: 0;
@@ -15,24 +17,6 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.btn {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.3rem;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
-  .btn + .btn {
-    margin-left: 1rem; }
-
-.btn:hover {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3); }
 
 @media screen and (min-width: 64em) {
   .btn {
@@ -53,22 +37,22 @@ a {
       margin-top: 1rem;
       margin-left: 0; } }
 
-.page-header {
+.site-header {
   color: #fff;
   text-align: center;
   background-color: #159957;
   background-image: linear-gradient(120deg, #155799, #159957); }
 
 @media screen and (min-width: 64em) {
-  .page-header {
+  .site-header {
     padding: 5rem 6rem; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-  .page-header {
+  .site-header {
     padding: 3rem 4rem; } }
 
 @media screen and (max-width: 42em) {
-  .page-header {
+  .site-header {
     padding: 2rem 1rem; } }
 
 .project-name {
