@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="//d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+(()=>{
+	const Log = (msg) => {console.log(msg)};
+	
+	console.log('script start');
+
+	const matrix = (r,c)=>{
+		let data = _.range(r).map(x=>_.range(c).map(x=>Math.random()));
+		return {'r':r,'c':c,'data':_.flatten(data)}
+	}
+	//add two arrays
+	a = [1.0,2];
+	b = [2,3,4];
+	const add = (a,b)=>{return _.zip(a,b).map((d)=> {
+				Log(typeof(d[0])=='number');
+				})
+			};
+	
+	c = add(a,b);
+	Log(c);
+
+	matA = matrix(100,100);
+	matB = matrix(100,100);
+
+	function slowMult(m1,m2) {
+	    var r1 = m1.r|0;
+	    var c1 = m1.c|0;
+	    var r2 = m2.r|0;
+	    var c2 = m2.c|0;
+	    // new matrix data r1xc2
+	    var d1 = m1.data;
+	    var d2 = m2.data;
+	    var matrix_out = matrix(r1,c2);
+	    var data = matrix_out.data
+	    for (var ii=0|0;ii<r1;++ii) {             // for each row in product
+	        for (var jj=0|0;jj<c2;++jj) {         // for each column in product
+	            var sum=+0;
+	            for (var kk=0|0;kk<c1;++kk) {     // for each item in sum - across m1, down m2
+	                sum += d1[ii*c1+kk]*d2[jj+kk*c2];
+	            }
+	            data[ii*c2+jj] = sum;
+	        }
+	    }
+	    return matrix_out;
+	}
+	start = (new Date()).getTime();
+	let matC = slowMult(matA,matB);
+	durr = (new Date()).getTime() - start;
+	Log(durr);
+	// d3.request()
+	
+	const reshape = (data,r,c)=>{
+		var dr = data.r|0;
+		var dc = data.c|0;
+		console.assert(data.length==r*c,'oop! wrong',data.length);
+		return _.chain(data).groupBy((d,i)=>Math.floor(i/c)).toArray().value();	
+	}
+
+	_data = reshape(matC.data, 100, 100);
+	
+
+	Log(_data);
+})();
+</script>
+</html>

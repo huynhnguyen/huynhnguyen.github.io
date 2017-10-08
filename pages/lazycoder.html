@@ -1,0 +1,46 @@
+<div class="container">
+	<section topic="d3">
+		<div class="row">
+			<div class="col-md-4">
+				<legend>D3 v4 API list</legend>
+				<input list="d3-api" class="form-control" id="d3-select">
+					<datalist id="d3-api"></datalist>
+			</div>
+			<div class="col-md-8" id="d3-api-description">
+
+			</div>
+		</div>
+	</section>
+</div>
+<style type="text/css">
+	.api-desc{
+		background: transparent;
+	}
+	.description{
+		display: none;
+	}
+</style>
+<script type="text/javascript">
+	require(['d3','jquery','underscore'],function(d3,$,_){
+		const Log = (msg)=>{console.log(msg)};
+		let api_display = $('#d3-api');
+		var api_description = $('#d3-api-description');
+		ret = _.mapObject(d3, function(val, key) {
+		  	api_display.append(`<option value="${key}"</option>`);
+		  	var new_desc = $(`<div id="fd-${key}" class="description"></div>`);
+		  	new_desc.append(`<pre class="api-desc"><code>${val}</code></pre>`);
+		  	_.mapObject(d3[key], function(val, key){
+		  		new_desc.append(`<legend>${key}</legend>`);
+		  		new_desc.append(`<pre class="api-desc"><code>${val}</code></pre>`);
+		  	})
+		  	api_description.append(new_desc);
+		});	
+		// Log($('.description'));
+		// $('.description').hide();
+		$('#d3-select').change(function(){
+			const idx = '#fd-'+$(this).val();
+			$('.description').fadeOut();
+			$(idx).fadeIn();
+		});
+	})
+</script>

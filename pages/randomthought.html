@@ -1,0 +1,201 @@
+<div class="container">
+	<div class="row ">
+		<div id="timeline" class="col-md-1 nopad"></div>
+		<div id="blogs" class="col-md-11"></div>
+	</div>
+</div>
+<style type="text/css">
+	.nopad{
+		padding: 0;
+	}
+	.day-log{
+		height: 80px;
+	}
+	.keylog:hover *{
+		color: #337ab7;
+		border-color: #337ab7;
+		font-weight: bold;
+	}
+	.tl-circle{
+		float: left; width: 20px; height: 20px; 
+		border: 1px solid black;
+    	border-radius: 10px; margin: 0 15px 0 5px;
+	}
+	.journal{
+		color: #ff7ab7;
+	}
+	.journal:hover *{
+		color: #ff0000;
+		border-color: #ff0000;
+		font-weight: bold;
+	}
+	.blog-circle{
+		float: left; width: 24px; height: 24px; 
+		border: 2px solid #ff7ab7;
+    	border-radius: 12px; margin: 0 13px 0 3px;
+	}
+	.bhline{
+		border-left: 3px solid #ff7ab7; height: 58px; 
+	    margin-left: 14px; margin-top: 2px;
+	}
+	.hline{
+		border-left: 3px solid black; height: 60px;
+	    margin-left: 14px;
+	}
+	.journal-page{
+		padding-left: 20px;
+	}
+</style>
+<script type="text/javascript">
+	require(['d3','jquery'],function(d3,$){
+		// $('#journal').load('./pages/randomthought/jupyter/jupyter/journal_16_08_2017.html');
+		const show_day_list = (eventhook)=>{
+			d3.json('./ulogme/logs/master.json',(data)=>{
+				//TODO: make it as preproecessing function
+				console.log(data);
+				data = data.reverse();
+				data.forEach((d,i)=>{
+					let _d = d.split('_');//logtype, y, m, d, 
+					const year = _d[1], month = _d[2], day = _d[3];
+					const keylog = (year,month,day)=>{
+						if(i < data.length - 1){
+							$('#timeline').append(`<div class="keylog day-log" date="bd-${year}-${month}-${day}">
+													<div class="tl-circle"></div>
+													<div>${day}/${month}/${year}</div><div class="hline"></div>
+												</div>`);	
+							}
+						else{
+							$('#timeline').append(`<div class="day-log" date="bd-${year}-${month}-${day}">
+													<div class="tl-circle"></div>
+													<div>${day}/${month}/${year}</div>
+												</div>`);		
+						}
+						$('#blogs').append(`<div id="bd-${year}-${month}-${day}"></div>`);
+						const link = './ulogme/logs/'.concat(d);
+						show_day_log(link,`bd-${year}-${month}-${day}`);	
+					}
+					const journalblog = (year,month,day)=>{
+						if(i < data.length - 1){
+							$('#timeline').append(`<div class="journal day-log" date="jr-${year}-${month}-${day}">
+													<div class="blog-circle"></div>
+													<div>${day}/${month}/${year}</div><div class="bhline"></div>
+												</div>`);	
+							}
+						else{
+							$('#timeline').append(`<div class="journal day-log" date="jr-${year}-${month}-${day}">
+													<div class="blog-circle"></div>
+													<div>${day}/${month}/${year}</div>
+												</div>`);
+						}
+						$('#blogs').append(`<div id="jr-${year}-${month}-${day}" class="journal-page"></div>`);
+					}
+					const logtype = {'keylog':keylog,'journal':journalblog}
+					logtype[_d[0]](year,month,day)
+				});
+				eventhook();
+			})
+			
+
+		};
+		
+		const show_day_log = (filename,date)=>{
+				d3.csv(filename,(_data)=>{
+				//TODO: make it as preproecessing function
+				
+				data = _data.map(d=>{
+					d.time = new Date(d.time*1000);
+					d.press = parseInt(d.press);
+					return d;
+				})
+				data2 = $.extend([],data);
+				data2 = data2.reduce((a,b)=>{
+					let _distance = b.time - a.slice(-1).pop().time;
+					if( _distance > 5*60*1000){
+						a.push(b);	
+					}
+					else{
+						a.slice(-1).pop().press += 1;
+						a.slice(-1).pop().distance = _distance;
+					}
+					return a;
+				},[data2[0]])
+				data2.forEach((x,i)=>{
+					x.press=parseInt(x.press/(5));
+					// if(i%2 == 1){
+					// 	x.time = new Date(x.time - x.distance/2;	
+					// }
+				});
+				console.log(data2);
+				let svg = d3.select(`#${date}`).append("svg"),
+				    margin = {top: 20, right: 80, bottom: 30, left: 50};
+				
+				svg.attr("width",$(`#${date}`).width());
+				svg.attr("height",'100');
+				let width = svg.attr("width") - margin.left - margin.right,
+				    height = svg.attr("height") - margin.top - margin.bottom,
+				    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+				
+				let x = d3.scaleTime().range([0, width]);
+				x.domain(d3.extent(data, function(d) { return d.time; }));
+				g.append("g")
+      				.attr("class", "axis axis--x")
+      				.attr("transform", "translate(0," + height + ")")
+      				.call(d3.axisBottom(x))
+      				.append("text")
+      					.attr("dx", 45)
+      					.attr("y", -66)
+      					.attr("dy", "1em")
+      					.attr("fill", "#000")
+      					.text(`keystrokes per minute`);
+
+
+				let y = d3.scaleLinear().range([height, 0]);
+				y.domain([0,d3.max(data,(d)=>d.press)]);
+				g.append("g")
+				    .attr("class", "axis axis--y")
+				    .call(d3.axisLeft(y).tickValues([0, parseInt(d3.max(data,(d)=>d.press)/2),d3.max(data,(d)=>d.press)]));
+				
+				
+				let line = d3.line().x(d => x(d.time))
+				    		.y(d => y(d.press)).curve(d3.curveMonotoneX)
+				
+				let path = g.append("g").append("path")
+      				.datum(data)
+	      				.attr("fill", "none")
+	      				.attr("stroke", "steelblue")
+	      				.attr("stroke-linejoin", "round")
+	      				.attr("stroke-linecap", "round")
+	      				.attr("stroke-width", 1.5)
+	      				.attr("id",`path-${date}`)
+	      				.attr("d", line);
+
+				const plen = path.node().getTotalLength();
+				path.attr("stroke-dasharray", plen + " " + plen)
+				 	.attr("stroke-dashoffset", plen)
+				 	.transition()
+						.duration(2000).ease(d3.easeLinear)
+				        .attr("stroke-dashoffset",0);
+			});
+		}
+		show_day_list(eventhook=()=>{
+			$('.keylog').click(function(){
+				$('.journal-page').html('');
+				const select_date = $(this).attr("date");
+				console.log(select_date);
+				let path = d3.select(`#path-${select_date}`);
+				const plen = path.node().getTotalLength();
+				path.attr("stroke-dashoffset", plen)
+					.transition().duration(2000).ease(d3.easeLinear)
+				        .attr("stroke-dashoffset",0);
+			})
+			$('.journal').click(function(){
+				$('.journal-page').html('');
+				const select_date = $(this).attr("date");
+				console.log(select_date);
+				let _d = select_date.split('-');//logtype, y, m, d, 
+				const day = _d[1], month = _d[2], year = _d[3];	
+				$(`#${select_date}`).load(`pages/randomthought/jupyter/jupyter_publish/journal_${day}_${month}_${year}_.html`);
+			})	
+		});
+	});
+</script>
