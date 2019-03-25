@@ -9,7 +9,6 @@
             margin: auto;
         }
         .information{
-            height: 45px;
             margin: 15px;
             padding: 10px;
             border: 1px solid #dfdfdf;
@@ -23,9 +22,12 @@
     </style>
     <body>
         <div id="infor" class="information">
-            <p>This demo compares the vectore representation of two senteces using 
-                <a href="https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder">Google Universal Sentence Encoder Lite version</a>
+            <p>This demo compares the vector representation of two words, senteces, phrases using 
+                <a href="https://github.com/tensorflow/tfjs-models/tree/master/universal-sentence-encoder">Google Universal Sentence Encoder Lite version.</a>
             </p>
+            <p>Examples: "dog" vs "cat", "king" vs "queen", "the game is not good" vs "the show is terrible".</p>
+            <p>Depend on machine and the length of input sentences, it would take several seconds for inferring vectors and comparing</p>
+
         </div>
         <div class="pure-g content">
             <div class="pure-u-6-24">
