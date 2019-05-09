@@ -1,0 +1,38 @@
+.github-markdown{
+    width: 800px;
+}
+.identifier-dir-tree{
+    display: none;
+}
+ul.demo li{
+    margin: 0px;
+    list-style-type: none;
+}
+
+.v-seperate{
+    margin-left: 120px; 
+    border-left: 1px solid #dfdfdf;
+}
+.term-logger{
+    max-height: 400px;
+    background: #efefef;
+    overflow-y: scroll;
+}
+.term-logger > ul {
+    padding-left: 0px !important;
+}
+.term-logger > ul > li {
+    font-size: 12px !important;
+    list-style-type: none;
+}
+
+.show#web-demo {
+    display: block !important;
+    padding: 0px;
+    background: white;
+    opacity: 0.9;
+}
+
+#web-demo {
+    display: none;
+}

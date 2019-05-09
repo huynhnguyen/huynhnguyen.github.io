@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | causal-net</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-pure-min.css"><link rel="stylesheet" href="./inject/css/0-causal-style.css"><script src="./inject/script/0-jquery-3.3.1.min.js"></script><script src="./inject/script/0-vendors.js"></script><script src="./inject/script/0-transpiler.js"></script><script src="./inject/script/0-require.js"></script><script src="./inject/script/0-run_examples.js"></script></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="v-seperate"></div>
+  <ul>
+    <li style="list-style-type: none;margin: 0px;">
+      <button style="border: none;padding: 0 5px 0 5px;" onclick="document.getElementById(&apos;web-demo&apos;).classList.toggle(&apos;show&apos;)"> Try demo </button>
+    </li>
+    <li style="list-style-type: none;margin: 0px;">
+      <ul id="web-demo" class="demo">
+        <li>
+          <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/mnist.html">Hand writing service building demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/20newsgroup.html">Text classification service building demo</a>
+        </li>
+      </ul>    
+    </li>
+  </ul>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/introduction.html"><a href="manual/introduction.html" data-ice="link">Introduction</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/introduction.html"><a href="manual/introduction.html#pipeline" data-ice="link">Pipeline</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/packages.html"><a href="manual/packages.html" data-ice="link">Monorepo</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#project-module-view" data-ice="link">Project module view</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-core" data-ice="link">causal-net.core</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetcore" data-ice="link">causalNetCore</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#tensor" data-ice="link">Tensor</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#functor" data-ice="link">Functor</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#store" data-ice="link">Store</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#event" data-ice="link">Event</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-datasets" data-ice="link">causal-net.datasets</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetdatasource" data-ice="link">CausalNetDataSource</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#datasetmixins" data-ice="link">DatasetMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-deployment" data-ice="link">causal-net.deployment</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetdeployment" data-ice="link">causalNetDeployment</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#deploymentmixins" data-ice="link">DeploymentMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-layer" data-ice="link">causal-net.layer</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetlayers" data-ice="link">CausalNetLayers</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetparameters" data-ice="link">CausalNetParameters</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetrunner" data-ice="link">CausalNetRunner</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#layerrunnermixins" data-ice="link">LayerRunnerMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-log" data-ice="link">causal-net.log</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#termlogger" data-ice="link">TermLogger</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#vivid" data-ice="link">Vivid</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#loggermixins" data-ice="link">LoggerMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-preprocessing" data-ice="link">causal-net.preprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#nlppreprocessing" data-ice="link">nlpPreprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#imagepreprocessing" data-ice="link">imagePreprocessing</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#preprocessingmixins" data-ice="link">PreprocessingMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-representation" data-ice="link">causal-net.representation</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetembedding" data-ice="link">CausalNetEmbedding</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#universalembedding" data-ice="link">UniversalEmbedding</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#representationmixins" data-ice="link">RepresentationMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-sampling" data-ice="link">causal-net.sampling</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetsampling" data-ice="link">CausalNetSampling</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#samplingmixins" data-ice="link">SamplingMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-models" data-ice="link">causal-net.models</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetmodels" data-ice="link">CausalNetModels</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#modelmixins" data-ice="link">ModelMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-optimizers" data-ice="link">causal-net.optimizers</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#causalnetsgdoptimizer" data-ice="link">CausalNetSGDOptimizer</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#trainermixins" data-ice="link">TrainerMixins</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#evaluatormixins" data-ice="link">EvaluatorMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-memcache" data-ice="link">causal-net.memcache</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#memdowncache" data-ice="link">memDownCache</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#memcachemixins" data-ice="link">MemCacheMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-storage" data-ice="link">causal-net.storage</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#indexdbstorage" data-ice="link">indexDBStorage</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#storagemixins" data-ice="link">StorageMixins</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/packages.html"><a href="manual/packages.html#causal-net-utils" data-ice="link">causal-net.utils</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#platform" data-ice="link">Platform</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#fetch" data-ice="link">Fetch</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#png" data-ice="link">PNG</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#csv" data-ice="link">CSV</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#stream" data-ice="link">Stream</a></li>
+<li data-ice="manualNav" class="indent-h3" data-link="manual/packages.html"><a href="manual/packages.html#assert" data-ice="link">Assert</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/streamProcessingText8.babel.node.js.html"><a href="manual/streamProcessingText8.babel.node.js.html" data-ice="link">Tutorials</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/streamProcessingText8.babel.node.js.html"><a href="manual/streamProcessingText8.babel.node.js.html#stream-processing-with-text8-data" data-ice="link">Stream processing with text8 data</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="tutorials">Tutorials</h1><h2 id="stream-processing-with-text8-data">Stream processing with text8 data</h2><p>Input raw text8 corpus file and return the occurent number of each tokens in corpus.</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import * as Preprocessing from &apos;causal-net.preprocessing&apos;;
+import * as Log from &apos;causal-net.log&apos;;
+import * as Utils from &apos;causal-net.utils&apos;;
+import * as Storage from &apos;causal-net.storage&apos;;
+import * as fs from &apos;fs&apos;;
+var { indexDBStorage } = Storage;
+var { stream } = Utils;
+var { termLogger } = Log;
+var { nlpPreprocessing, tokenizerEN } = Preprocessing;</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">&apos;use strict&apos;</code>
+</code></pre><p>create stream process</p>
+<ul>
+<li>read chunks from file.</li>
+<li>transform each chunk.</li>
+<li>write transformed chunk into new files.</li>
+</ul>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">var remainingChars = &apos;&apos;, wordFreqCount = {}, lineIndex = 0;
+function tranformFn(chunkData, chunkEncoding, afterTransformFn){
+    let sampleText = chunkData + remainingChars;
+    let sampleLines = sampleText.split(&apos;\n&apos;);
+    let transformedData = [];
+    for(let line of sampleLines){
+        let tokens = tokenizerEN.tokenize(line);
+        wordFreqCount = nlpPreprocessing.wordFreqCount(tokens, wordFreqCount);
+        lineIndex += 1;
+        transformedData.push({lineIndex, tokens});
+    }
+    afterTransformFn(null, transformedData);
+};
+var transformer = stream.makeTransform(tranformFn);
+
+function writeTokens(transformedData, chunkEncoding, afterWriteFn){
+    const WriteTokensToFile = async (transformedData)=&gt;{
+        for(let {lineIndex, tokens} of transformedData){
+//             console.log({lineIndex});
+            await indexDBStorage.writeFile(`/corpus/line_${lineIndex}`, JSON.stringify(tokens));
+        }
+    }
+    WriteTokensToFile(transformedData).then(()=&gt;{
+        afterWriteFn();
+    })
+}
+var writer = stream.makeWritable(writeTokens);
+var characterCount = 0;
+(async ()=&gt;{
+    var corpusReader = fs.createReadStream(&apos;../datasets/text8/text8.txt&apos;);
+    const CorpusStreamer = stream.makePipeline([corpusReader, transformer, writer], (data)=&gt;{
+        characterCount += data.length;
+    });
+    termLogger.groupBegin(&apos;stream performance&apos;);
+    let result = await CorpusStreamer;
+    termLogger.groupEnd()
+    termLogger.log({ result, characterCount } );
+})();</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">stream performance: begin at Fri Mar 15 2019 16:42:45 GMT+0700 (Indochina Time)
+stream performance: end after 8514 (ms)
+{ result: &apos;Success&apos;, characterCount: 100000000 }</code>
+</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint">termLogger.log({&apos;show 100 items&apos;: Object.entries(wordFreqCount).slice(0,100)});</code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">{ &apos;show 100 items&apos;:
+   [ [ &apos;anarchism&apos;, 303 ],
+     [ &apos;originated&apos;, 572 ],
+     [ &apos;as&apos;, 131819 ],
+     [ &apos;a&apos;, 325895 ],
+     [ &apos;term&apos;, 7220 ],
+     [ &apos;of&apos;, 593676 ],
+     [ &apos;abuse&apos;, 563 ],
+     [ &apos;first&apos;, 28809 ],
+     [ &apos;used&apos;, 22736 ],
+     [ &apos;against&apos;, 8431 ],
+     [ &apos;early&apos;, 10172 ],
+     [ &apos;working&apos;, 2270 ],
+     [ &apos;class&apos;, 3412 ],
+     [ &apos;radicals&apos;, 116 ],
+     [ &apos;including&apos;, 9630 ],
+     [ &apos;the&apos;, 1061363 ],
+     [ &apos;diggers&apos;, 25 ],
+     [ &apos;english&apos;, 11868 ],
+     [ &apos;revolution&apos;, 2029 ],
+     [ &apos;and&apos;, 416615 ],
+     [ &apos;sans&apos;, 68 ],
+     [ &apos;culottes&apos;, 6 ],
+     [ &apos;french&apos;, 8736 ],
+     [ &apos;whilst&apos;, 481 ],
+     [ &apos;is&apos;, 183158 ],
+     [ &apos;still&apos;, 7378 ],
+     [ &apos;in&apos;, 372203 ],
+     [ &apos;pejorative&apos;, 114 ],
+     [ &apos;way&apos;, 6432 ],
+     [ &apos;to&apos;, 316375 ],
+     [ &apos;describe&apos;, 1352 ],
+     [ &apos;any&apos;, 11804 ],
+     [ &apos;act&apos;, 3502 ],
+     [ &apos;that&apos;, 109508 ],
+     [ &apos;violent&apos;, 653 ],
+     [ &apos;means&apos;, 4165 ],
+     [ &apos;destroy&apos;, 466 ],
+     [ &apos;organization&apos;, 2374 ],
+     [ &apos;society&apos;, 4067 ],
+     [ &apos;it&apos;, 73335 ],
+     [ &apos;has&apos;, 37865 ],
+     [ &apos;also&apos;, 44358 ],
+     [ &apos;been&apos;, 25381 ],
+     [ &apos;taken&apos;, 3043 ],
+     [ &apos;up&apos;, 12446 ],
+     [ &apos;positive&apos;, 1254 ],
+     [ &apos;label&apos;, 646 ],
+     [ &apos;by&apos;, 111829 ],
+     [ &apos;self&apos;, 2879 ],
+     [ &apos;defined&apos;, 2449 ],
+     [ &apos;anarchists&apos;, 203 ],
+     [ &apos;word&apos;, 5678 ],
+     [ &apos;derived&apos;, 1701 ],
+     [ &apos;from&apos;, 72865 ],
+     [ &apos;greek&apos;, 4577 ],
+     [ &apos;without&apos;, 5660 ],
+     [ &apos;archons&apos;, 10 ],
+     [ &apos;ruler&apos;, 617 ],
+     [ &apos;chief&apos;, 2130 ],
+     [ &apos;king&apos;, 7457 ],
+     [ &apos;political&apos;, 6967 ],
+     [ &apos;philosophy&apos;, 2758 ],
+     [ &apos;belief&apos;, 1572 ],
+     [ &apos;rulers&apos;, 687 ],
+     [ &apos;are&apos;, 76523 ],
+     [ &apos;unnecessary&apos;, 146 ],
+     [ &apos;should&apos;, 5113 ],
+     [ &apos;be&apos;, 61283 ],
+     [ &apos;abolished&apos;, 399 ],
+     [ &apos;although&apos;, 9286 ],
+     [ &apos;there&apos;, 22706 ],
+     [ &apos;differing&apos;, 231 ],
+     [ &apos;interpretations&apos;, 395 ],
+     [ &apos;what&apos;, 8581 ],
+     [ &apos;this&apos;, 58827 ],
+     [ &apos;refers&apos;, 1570 ],
+     [ &apos;related&apos;, 3535 ],
+     [ &apos;social&apos;, 4307 ],
+     [ &apos;movements&apos;, 1002 ],
+     [ &apos;advocate&apos;, 331 ],
+     [ &apos;elimination&apos;, 216 ],
+     [ &apos;authoritarian&apos;, 185 ],
+     [ &apos;institutions&apos;, 1021 ],
+     [ &apos;particularly&apos;, 2881 ],
+     [ &apos;state&apos;, 12905 ],
+     [ &apos;anarchy&apos;, 109 ],
+     [ &apos;most&apos;, 25562 ],
+     [ &apos;use&apos;, 14011 ],
+     [ &apos;does&apos;, 5220 ],
+     [ &apos;not&apos;, 44030 ],
+     [ &apos;imply&apos;, 257 ],
+     [ &apos;chaos&apos;, 331 ],
+     [ &apos;nihilism&apos;, 42 ],
+     [ &apos;or&apos;, 68948 ],
+     [ &apos;anomie&apos;, 7 ],
+     [ &apos;but&apos;, 35356 ],
+     [ &apos;rather&apos;, 4605 ],
+     [ &apos;harmonious&apos;, 28 ],
+     [ &apos;anti&apos;, 3103 ],
+     [ &apos;place&apos;, 5345 ] ] }</code>
+</code></pre><p>After preprocessing, data is saved into files under <code>/copus/</code> folder</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">(async ()=&gt;{
+    termLogger.groupBegin(&apos;get list of preprocessing files&apos;)
+    let listFiles = await indexDBStorage.getFileList(&apos;/corpus/&apos;);
+    termLogger.groupEnd()
+    termLogger.groupBegin(&apos;read one file from indexDB&apos;)
+    let tokens = await indexDBStorage.readFile(listFiles[0]);
+    termLogger.groupEnd()
+    termLogger.log([ listFiles.length , JSON.parse(tokens).length]);
+})()    </code>
+</code></pre>
+<pre><code><code class="source-code prettyprint">get list of preprocessing files: begin at Fri Mar 15 2019 16:42:56 GMT+0700 (Indochina Time)
+get list of preprocessing files: end after 194 (ms)
+read one file from indexDB: begin at Fri Mar 15 2019 16:42:56 GMT+0700 (Indochina Time)
+read one file from indexDB: end after 0 (ms)
+[ 3228, 1293 ]</code>
+</code></pre><pre><code class="lang-javascript"><code class="source-code prettyprint"></code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

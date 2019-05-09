@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href>
+  <title data-ice="title">Source | causal-net</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<link rel="stylesheet" href="./inject/css/0-pure-min.css"><link rel="stylesheet" href="./inject/css/0-causal-style.css"><script src="./inject/script/0-jquery-3.3.1.min.js"></script><script src="./inject/script/0-vendors.js"></script><script src="./inject/script/0-transpiler.js"></script><script src="./inject/script/0-require.js"></script><script src="./inject/script/0-run_examples.js"></script></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="v-seperate"></div>
+  <ul>
+    <li style="list-style-type: none;margin: 0px;">
+      <button style="border: none;padding: 0 5px 0 5px;" onclick="document.getElementById(&apos;web-demo&apos;).classList.toggle(&apos;show&apos;)"> Try demo </button>
+    </li>
+    <li style="list-style-type: none;margin: 0px;">
+      <ul id="web-demo" class="demo">
+        <li>
+          <a href="prebuilt-demos/representation.html">Sentence representation demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/mnist.html">Hand writing service building demo</a>
+        </li>
+        <li>
+          <a href="prebuilt-demos/20newsgroup.html">Text classification service building demo</a>
+        </li>
+      </ul>    
+    </li>
+  </ul>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-core-src">causality-core/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/causalNetCore.js~CausalNetCore.html">CausalNetCore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/event.js~Event.html">Event</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/functor.js~Functor.html">Functor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/store.js~Store.html">Store</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-core/src/tensor.js~Tensor.html">Tensor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetCore">causalNetCore</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-datasets-src">causality-datasets/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/causalNetDataSource.js~CausalNetDataSource.html">CausalNetDataSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/dataSource.mixins.js~DataSourceMixins.html">DataSourceMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetDataSource">causalNetDataSource</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-datasets-src-readers">causality-datasets/src/Readers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/Readers/bufferReader.mixins.js~BufferReaderMixins.html">BufferReaderMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/Readers/csvReader.mixins.js~CSVReaderMixins.html">CSVReaderMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-datasets/src/Readers/pngReader.mixins.js~PNGReaderMixins.html">PNGReaderMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-deployment-src">causality-deployment/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-deployment/src/causalNetDeployment.js~CausalNetDeployment.html">CausalNetDeployment</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-deployment/src/deployment.mixins.js~DeploymentMixins.html">DeploymentMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetDeployment">causalNetDeployment</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src">causality-layer/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins.html">LayerRunnerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetlayers">causality-layer/src/CausalNetLayers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetLayers/dense.mixins.js~DenseLayerMixins.html">DenseLayerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetLayers">causalNetLayers</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetparameters">causality-layer/src/CausalNetParameters</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins.html">ParameterMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html">ParameterFunctor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js~ParameterFunctorMixins.html">ParameterFunctorMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetParameters">causalNetParameters</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-parameterFunctor">parameterFunctor</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-layer-src-causalnetrunner">causality-layer/src/CausalNetRunner</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner.html">CausalNetRunner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins.html">RunnerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetRunner">causalNetRunner</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-log-src">causality-log/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/baseLogger.js~BaseLogger.html">BaseLogger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/logger.mixins.js~LoggerMixins.html">LoggerMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/prettyJson.js~JsonView.html">JsonView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/termLogger.js~TermLogger.html">TermLogger</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/termLogger.mixins.node.js~LogNodeMixins.html">LogNodeMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/termLogger.mixins.web.js~LogWebMixins.html">LogWebMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-termLogger">termLogger</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-log-src-vivid">causality-log/src/Vivid</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/line.chart.mixins.js~LineChartMixins.html">LineChartMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/plot.mixins.js~PlotMixins.html">PlotMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/scatter.chart.mixins.js~ScatterChartMixins.html">ScatterChartMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/vivid.js~BasePlot.html">BasePlot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/vivid.js~Vivid.html">Vivid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/vivid.mixins.node.js~VividNodeMixins.html">VividNodeMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-log/src/Vivid/vivid.mixins.web.js~VividWebMixins.html">VividWebMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-vivid">vivid</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-memcache-src">causality-memcache/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-memcache/src/memcache.mixins.js~MemCacheMixins.html">MemCacheMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-memcache/src/memdownCache.js~MemdownCache.html">MemdownCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-memcache/src/memorizing.mixins.js~MemorizingMixins.html">MemorizingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-memdownCache">memdownCache</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-memory-src">causality-memory/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetMemory">causalNetMemory</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-models-src">causality-models/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-models/src/baseModel.js~BaseModel.html">BaseModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-models/src/model.mixins.js~ModelMixins.html">ModelMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html">SingleLabelClassification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetModels">causalNetModels</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-optimizers-src">causality-optimizers/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/evaluator.mixins.js~EvaluatorMixins.html">EvaluatorMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/trainer.mixins.js~TrainerMixins.html">TrainerMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-optimizers-src-stochasticgradientdescent">causality-optimizers/src/StochasticGradientDescent</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/SGDFitParams.mixins.js~SGDFitParamsMixins.html">SGDFitParamsMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/adamOptimizer.js~AdamOptimizer.html">AdamOptimizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js~CausalNetSGDOptimizer.html">CausalNetSGDOptimizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/functor.js~Functor.html">Functor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSGDOptimizer">causalNetSGDOptimizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src">causality-preprocessing/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/causalNetPreprocessingStream.js~CausalNetPreprocessingStream.html">CausalNetPreprocessingStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/preprocessing.mixins.js~PreprocessingMixins.html">PreprocessingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetPreprocessingStream">causalNetPreprocessingStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-imagePreprocessing">imagePreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-nLPPreprocessing">nLPPreprocessing</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-tabularPreprocessing">tabularPreprocessing</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src-image">causality-preprocessing/src/Image</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Image/colorTransforming.mixins.js~ColorTransformingMixins.html">ColorTransformingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Image/imageScaling.mixins.js~ImageScalingMixins.html">ImageScalingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Image/imageSplitting.mixins.js~ImageSplittingMixins.html">ImageSplittingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-boxScaling">boxScaling</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src-nlp">causality-preprocessing/src/NLP</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/NLP/tokenTransforming.mixins.js~TokenTransformingMixins.html">TokenTransformingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src-tabular">causality-preprocessing/src/Tabular</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tabular/categoryNormalizing.mixins.js~CategoryNormalizingMixins.html">CategoryNormalizingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tabular/continuousNormalizing.mixins.js~ItemNormalizingMixins.html">ItemNormalizingMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-preprocessing-src-tokenizer">causality-preprocessing/src/Tokenizer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/sentencePiece.js~SentencePieceTokenizer.html">SentencePieceTokenizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/tokenizer.js~Tokenizer.html">Tokenizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/trie.js~Trie.html">Trie</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-stringToChars">stringToChars</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-tokenizer">tokenizer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-representation-src">causality-representation/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/functor.js~Functor.html">Functor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/representation.mixins.js~RepresentationMixins.html">RepresentationMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html">UniversalEmbedding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/vectorMetrics.mixins.js~VectorMetricMixins.html">VectorMetricMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/wordEmbedding.mixins.js~WordEmbeddingMixins.html">WordEmbeddingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/wordEmbeddingFunctor.mixins.js~WordEmbeddingFunctorMixins.html">WordEmbeddingFunctorMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetEmbedding">causalNetEmbedding</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-universalEmbedding">universalEmbedding</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-representation-src-lookup">causality-representation/src/Lookup</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/Lookup/chunkLookup.mixins.js~ChunkLookupMixins.html">ChunkLookupMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-representation/src/Lookup/tokenLookup.mixins.js~TokenLookUpMixins.html">TokenLookUpMixins</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-sampling-src">causality-sampling/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-sampling/src/negSampling.mixins.js~NegativeSamplingMixins.html">NegativeSamplingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-sampling/src/sampling.mixins.js~SamplingMixins.html">SamplingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-sampling/src/subSampling.mixins.js~SubSamplingMixins.html">SubSamplingMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNetSampling">causalNetSampling</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-storage-src">causality-storage/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/CSVFile.mixins.js~CSVFileMixins.html">CSVFileMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/PNGFile.mixins.js~PNGFileMixins.html">PNGFileMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/indexDBStorage.mixins.node.js~LevelDownMixins.html">LevelDownMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/indexDBStorage.mixins.web.js~LevelJSMixins.html">LevelJSMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/storage.mixins.js~StorageMixins.html">StorageMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-storage/src/textFile.mixins.js~TextFileMixins.html">TextFileMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-indexDBStorage">indexDBStorage</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-utils-src">causality-utils/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/bufferUtils.js~BufferUtils.html">BufferUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/csvUtils.js~CSVUtils.html">CSVUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/fetchStreamMixins.node.js~NodeStreamMixins.html">NodeStreamMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/fetchStreamMixins.web.js~WebStreamMixins.html">WebStreamMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/jsonUtils.js~JSONUtils.html">JSONUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/pngUtils.js~PNGUtils.html">PNGUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-assert">assert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-bufferUtils">bufferUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-cSVUtils">cSVUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-fetch">fetch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-jsonUtils">jsonUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-platform">platform</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pNGUtils">pNGUtils</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-streamUtils">streamUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-src">causality/src</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/causalNet.js~CausalNet.html">CausalNet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/functor.js~Functor.html">Functor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-causalNet">causalNet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-functor">functor</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#causality-src-ensemble">causality/src/Ensemble</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/Ensemble/ensembleDeployment.mixins.js~EnsembleDeploymentMixins.html">EnsembleDeploymentMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/Ensemble/ensembleEvaluator.mixins.js~EnsembleEvaluatorMixins.html">EnsembleEvaluatorMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/Ensemble/ensembleModel.mixins.js~EnsembleModelMixins.html">EnsembleModelMixins</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/packages/causality/src/Ensemble/ensembleTrainer.mixins.js~EnsembleTrainerMixins.html">EnsembleTrainerMixins</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1>Source <span data-ice="totalCoverageCount" class="total-coverage-count"></span></h1>
+
+<table class="files-summary" data-ice="files" data-use-coverage="false">
+  <thead>
+    <tr>
+      <td>File</td>
+      <td>Identifier</td>
+      <td class="coverage">Document</td>
+      <td style="display: none;">Size</td>
+      <td style="display: none;">Lines</td>
+      <td style="display: none;">Updated</td>
+    </tr>
+  </thead>
+  <tbody>
+    
+  <tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-core/src/causalNetCore.js.html">packages/causality-core/src/causalNetCore.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-core/src/causalNetCore.js~CausalNetCore.html">CausalNetCore</a></span>
+<span><a href="variable/index.html#static-variable-causalNetCore">causalNetCore</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">527 byte</td>
+      <td style="display: none;" data-ice="lines">22</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 15:21:30 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-core/src/event.js.html">packages/causality-core/src/event.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-core/src/event.js~Event.html">Event</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1015 byte</td>
+      <td style="display: none;" data-ice="lines">39</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 15:27:13 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-core/src/functor.js.html">packages/causality-core/src/functor.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-core/src/functor.js~Functor.html">Functor</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2651 byte</td>
+      <td style="display: none;" data-ice="lines">101</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 07:57:35 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-core/src/index.js.html">packages/causality-core/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">243 byte</td>
+      <td style="display: none;" data-ice="lines">6</td>
+      <td style="display: none;" data-ice="updated">2019-04-03 10:26:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-core/src/store.js.html">packages/causality-core/src/store.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-core/src/store.js~Store.html">Store</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4481 byte</td>
+      <td style="display: none;" data-ice="lines">143</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 11:33:22 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-core/src/tensor.js.html">packages/causality-core/src/tensor.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-core/src/tensor.js~Tensor.html">Tensor</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">803 byte</td>
+      <td style="display: none;" data-ice="lines">29</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 08:02:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-datasets/src/Readers/bufferReader.mixins.js.html">packages/causality-datasets/src/Readers/bufferReader.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-datasets/src/Readers/bufferReader.mixins.js~BufferReaderMixins.html">BufferReaderMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">628 byte</td>
+      <td style="display: none;" data-ice="lines">17</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 06:02:38 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-datasets/src/Readers/csvReader.mixins.js.html">packages/causality-datasets/src/Readers/csvReader.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-datasets/src/Readers/csvReader.mixins.js~CSVReaderMixins.html">CSVReaderMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1530 byte</td>
+      <td style="display: none;" data-ice="lines">42</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 12:41:07 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-datasets/src/Readers/init.js.html">packages/causality-datasets/src/Readers/init.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">200 byte</td>
+      <td style="display: none;" data-ice="lines">2</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 07:38:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-datasets/src/Readers/pngReader.mixins.js.html">packages/causality-datasets/src/Readers/pngReader.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-datasets/src/Readers/pngReader.mixins.js~PNGReaderMixins.html">PNGReaderMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">581 byte</td>
+      <td style="display: none;" data-ice="lines">16</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 06:01:19 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-datasets/src/causalNetDataSource.js.html">packages/causality-datasets/src/causalNetDataSource.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-datasets/src/causalNetDataSource.js~CausalNetDataSource.html">CausalNetDataSource</a></span>
+<span><a href="variable/index.html#static-variable-causalNetDataSource">causalNetDataSource</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">6995 byte</td>
+      <td style="display: none;" data-ice="lines">207</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 12:42:38 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-datasets/src/dataSource.mixins.js.html">packages/causality-datasets/src/dataSource.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-datasets/src/dataSource.mixins.js~DataSourceMixins.html">DataSourceMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1388 byte</td>
+      <td style="display: none;" data-ice="lines">44</td>
+      <td style="display: none;" data-ice="updated">2019-05-06 08:14:19 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-datasets/src/functor.js.html">packages/causality-datasets/src/functor.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">72 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-04-02 05:03:46 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-datasets/src/index.js.html">packages/causality-datasets/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">138 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-04-03 06:55:07 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-deployment/src/causalNetDeployment.js.html">packages/causality-deployment/src/causalNetDeployment.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-deployment/src/causalNetDeployment.js~CausalNetDeployment.html">CausalNetDeployment</a></span>
+<span><a href="variable/index.html#static-variable-causalNetDeployment">causalNetDeployment</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2771 byte</td>
+      <td style="display: none;" data-ice="lines">95</td>
+      <td style="display: none;" data-ice="updated">2019-05-06 07:30:47 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-deployment/src/deployment.mixins.js.html">packages/causality-deployment/src/deployment.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-deployment/src/deployment.mixins.js~DeploymentMixins.html">DeploymentMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2271 byte</td>
+      <td style="display: none;" data-ice="lines">68</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 15:15:44 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-deployment/src/functor.js.html">packages/causality-deployment/src/functor.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">72 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-04-03 14:17:39 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-deployment/src/index.js.html">packages/causality-deployment/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">138 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-04-03 15:33:32 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js.html">packages/causality-layer/src/CausalNetLayers/causalNetLayers.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/CausalNetLayers/causalNetLayers.js~CausalNetLayers.html">CausalNetLayers</a></span>
+<span><a href="variable/index.html#static-variable-causalNetLayers">causalNetLayers</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">804 byte</td>
+      <td style="display: none;" data-ice="lines">25</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 08:40:45 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetLayers/dense.mixins.js.html">packages/causality-layer/src/CausalNetLayers/dense.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/CausalNetLayers/dense.mixins.js~DenseLayerMixins.html">DenseLayerMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1268 byte</td>
+      <td style="display: none;" data-ice="lines">32</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 03:16:44 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetLayers/index.js.html">packages/causality-layer/src/CausalNetLayers/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">63 byte</td>
+      
+      <td style="display: none;" data-ice="updated">2019-03-02 08:27:22 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js.html">packages/causality-layer/src/CausalNetParameters/causalNetParameters.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/CausalNetParameters/causalNetParameters.js~CausalNetParameters.html">CausalNetParameters</a></span>
+<span><a href="variable/index.html#static-variable-causalNetParameters">causalNetParameters</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">970 byte</td>
+      <td style="display: none;" data-ice="lines">23</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 08:41:10 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetParameters/index.js.html">packages/causality-layer/src/CausalNetParameters/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">215 byte</td>
+      <td style="display: none;" data-ice="lines">2</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 09:44:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetParameters/parameter.mixins.js.html">packages/causality-layer/src/CausalNetParameters/parameter.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameter.mixins.js~ParameterMixins.html">ParameterMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">5488 byte</td>
+      <td style="display: none;" data-ice="lines">156</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 12:33:01 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js.html">packages/causality-layer/src/CausalNetParameters/parameterFunctor.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameterFunctor.js~ParameterFunctor.html">ParameterFunctor</a></span>
+<span><a href="variable/index.html#static-variable-parameterFunctor">parameterFunctor</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">352 byte</td>
+      <td style="display: none;" data-ice="lines">10</td>
+      <td style="display: none;" data-ice="updated">2019-03-01 03:52:19 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js.html">packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/CausalNetParameters/parameterFunctor.mixins.js~ParameterFunctorMixins.html">ParameterFunctorMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1100 byte</td>
+      <td style="display: none;" data-ice="lines">26</td>
+      <td style="display: none;" data-ice="updated">2019-03-01 07:39:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js.html">packages/causality-layer/src/CausalNetRunner/causalNetRunner.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/CausalNetRunner/causalNetRunner.js~CausalNetRunner.html">CausalNetRunner</a></span>
+<span><a href="variable/index.html#static-variable-causalNetRunner">causalNetRunner</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">589 byte</td>
+      <td style="display: none;" data-ice="lines">17</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 08:33:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetRunner/index.js.html">packages/causality-layer/src/CausalNetRunner/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">122 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-03-01 03:43:34 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/CausalNetRunner/runner.mixins.js.html">packages/causality-layer/src/CausalNetRunner/runner.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/CausalNetRunner/runner.mixins.js~RunnerMixins.html">RunnerMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">3617 byte</td>
+      <td style="display: none;" data-ice="lines">106</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 14:13:25 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/index.js.html">packages/causality-layer/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">309 byte</td>
+      <td style="display: none;" data-ice="lines">4</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 09:44:48 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-layer/src/layerRunner.mixins.js.html">packages/causality-layer/src/layerRunner.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-layer/src/layerRunner.mixins.js~LayerRunnerMixins.html">LayerRunnerMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1794 byte</td>
+      <td style="display: none;" data-ice="lines">58</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 04:14:09 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/Vivid/init.js.html">packages/causality-log/src/Vivid/init.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">98 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/Vivid/line.chart.mixins.js.html">packages/causality-log/src/Vivid/line.chart.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/Vivid/line.chart.mixins.js~LineChartMixins.html">LineChartMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2079 byte</td>
+      <td style="display: none;" data-ice="lines">44</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/Vivid/plot.mixins.js.html">packages/causality-log/src/Vivid/plot.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/Vivid/plot.mixins.js~PlotMixins.html">PlotMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">415 byte</td>
+      <td style="display: none;" data-ice="lines">18</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 08:42:50 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/Vivid/scatter.chart.mixins.js.html">packages/causality-log/src/Vivid/scatter.chart.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/Vivid/scatter.chart.mixins.js~ScatterChartMixins.html">ScatterChartMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">931 byte</td>
+      <td style="display: none;" data-ice="lines">20</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/Vivid/vivid.js.html">packages/causality-log/src/Vivid/vivid.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/Vivid/vivid.js~BasePlot.html">BasePlot</a></span>
+<span><a href="class/packages/causality-log/src/Vivid/vivid.js~Vivid.html">Vivid</a></span>
+<span><a href="variable/index.html#static-variable-vivid">vivid</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4591 byte</td>
+      <td style="display: none;" data-ice="lines">103</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/Vivid/vivid.mixins.node.js.html">packages/causality-log/src/Vivid/vivid.mixins.node.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/Vivid/vivid.mixins.node.js~VividNodeMixins.html">VividNodeMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2161 byte</td>
+      <td style="display: none;" data-ice="lines">63</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/Vivid/vivid.mixins.web.js.html">packages/causality-log/src/Vivid/vivid.mixins.web.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/Vivid/vivid.mixins.web.js~VividWebMixins.html">VividWebMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1577 byte</td>
+      <td style="display: none;" data-ice="lines">47</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 13:06:10 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/baseLogger.js.html">packages/causality-log/src/baseLogger.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/baseLogger.js~BaseLogger.html">BaseLogger</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1423 byte</td>
+      <td style="display: none;" data-ice="lines">63</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/index.js.html">packages/causality-log/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">206 byte</td>
+      <td style="display: none;" data-ice="lines">5</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/logger.mixins.js.html">packages/causality-log/src/logger.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/logger.mixins.js~LoggerMixins.html">LoggerMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">619 byte</td>
+      <td style="display: none;" data-ice="lines">24</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/prettyJson.js.html">packages/causality-log/src/prettyJson.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/prettyJson.js~JsonView.html">JsonView</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">9508 byte</td>
+      <td style="display: none;" data-ice="lines">206</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/termLogger.js.html">packages/causality-log/src/termLogger.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/termLogger.js~TermLogger.html">TermLogger</a></span>
+<span><a href="variable/index.html#static-variable-termLogger">termLogger</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1461 byte</td>
+      <td style="display: none;" data-ice="lines">41</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 08:34:59 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/termLogger.mixins.node.js.html">packages/causality-log/src/termLogger.mixins.node.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/termLogger.mixins.node.js~LogNodeMixins.html">LogNodeMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1932 byte</td>
+      <td style="display: none;" data-ice="lines">75</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-log/src/termLogger.mixins.web.js.html">packages/causality-log/src/termLogger.mixins.web.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-log/src/termLogger.mixins.web.js~LogWebMixins.html">LogWebMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4238 byte</td>
+      <td style="display: none;" data-ice="lines">124</td>
+      <td style="display: none;" data-ice="updated">2019-05-04 08:52:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-memcache/src/index.js.html">packages/causality-memcache/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">121 byte</td>
+      <td style="display: none;" data-ice="lines">2</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-memcache/src/memcache.mixins.js.html">packages/causality-memcache/src/memcache.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-memcache/src/memcache.mixins.js~MemCacheMixins.html">MemCacheMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">527 byte</td>
+      <td style="display: none;" data-ice="lines">22</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 08:52:55 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-memcache/src/memdownCache.js.html">packages/causality-memcache/src/memdownCache.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-memcache/src/memdownCache.js~MemdownCache.html">MemdownCache</a></span>
+<span><a href="variable/index.html#static-variable-memdownCache">memdownCache</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">865 byte</td>
+      <td style="display: none;" data-ice="lines">26</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 12:26:16 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-memcache/src/memorizing.mixins.js.html">packages/causality-memcache/src/memorizing.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-memcache/src/memorizing.mixins.js~MemorizingMixins.html">MemorizingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1346 byte</td>
+      <td style="display: none;" data-ice="lines">48</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-memory/src/causalNetMemory.js.html">packages/causality-memory/src/causalNetMemory.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-memory/src/causalNetMemory.js~CausalNetMemory.html">CausalNetMemory</a></span>
+<span><a href="variable/index.html#static-variable-causalNetMemory">causalNetMemory</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2704 byte</td>
+      <td style="display: none;" data-ice="lines">89</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 05:08:13 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-memory/src/index.js.html">packages/causality-memory/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">63 byte</td>
+      
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-models/src/baseModel.js.html">packages/causality-models/src/baseModel.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-models/src/baseModel.js~BaseModel.html">BaseModel</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">583 byte</td>
+      <td style="display: none;" data-ice="lines">31</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 09:39:01 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-models/src/causalNetModels.js.html">packages/causality-models/src/causalNetModels.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-models/src/causalNetModels.js~CausalNetModels.html">CausalNetModels</a></span>
+<span><a href="variable/index.html#static-variable-causalNetModels">causalNetModels</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">688 byte</td>
+      <td style="display: none;" data-ice="lines">20</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-models/src/index.js.html">packages/causality-models/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">258 byte</td>
+      <td style="display: none;" data-ice="lines">5</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 09:43:48 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-models/src/model.mixins.js.html">packages/causality-models/src/model.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-models/src/model.mixins.js~ModelMixins.html">ModelMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1696 byte</td>
+      <td style="display: none;" data-ice="lines">72</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 09:44:13 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-models/src/singleLableClassification.js.html">packages/causality-models/src/singleLableClassification.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-models/src/singleLableClassification.js~SingleLabelClassification.html">SingleLabelClassification</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1693 byte</td>
+      <td style="display: none;" data-ice="lines">61</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 09:39:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/SGDFitParams.mixins.js.html">packages/causality-optimizers/src/StochasticGradientDescent/SGDFitParams.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/SGDFitParams.mixins.js~SGDFitParamsMixins.html">SGDFitParamsMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">228 byte</td>
+      <td style="display: none;" data-ice="lines">6</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/adamOptimizer.js.html">packages/causality-optimizers/src/StochasticGradientDescent/adamOptimizer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/adamOptimizer.js~AdamOptimizer.html">AdamOptimizer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">819 byte</td>
+      <td style="display: none;" data-ice="lines">18</td>
+      <td style="display: none;" data-ice="updated">2019-04-02 09:25:58 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js.html">packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/causalNetSGDOptimizer.js~CausalNetSGDOptimizer.html">CausalNetSGDOptimizer</a></span>
+<span><a href="variable/index.html#static-variable-causalNetSGDOptimizer">causalNetSGDOptimizer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">728 byte</td>
+      <td style="display: none;" data-ice="lines">21</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 04:58:56 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/functor.js.html">packages/causality-optimizers/src/StochasticGradientDescent/functor.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-optimizers/src/StochasticGradientDescent/functor.js~Functor.html">Functor</a></span>
+<span><a href="variable/index.html#static-variable-functor">functor</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">343 byte</td>
+      <td style="display: none;" data-ice="lines">12</td>
+      <td style="display: none;" data-ice="updated">2019-03-03 09:35:03 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-optimizers/src/StochasticGradientDescent/index.js.html">packages/causality-optimizers/src/StochasticGradientDescent/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">146 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-optimizers/src/evaluator.mixins.js.html">packages/causality-optimizers/src/evaluator.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-optimizers/src/evaluator.mixins.js~EvaluatorMixins.html">EvaluatorMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1819 byte</td>
+      <td style="display: none;" data-ice="lines">50</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 11:13:44 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-optimizers/src/index.js.html">packages/causality-optimizers/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">200 byte</td>
+      <td style="display: none;" data-ice="lines">2</td>
+      <td style="display: none;" data-ice="updated">2019-03-03 11:12:57 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-optimizers/src/trainer.mixins.js.html">packages/causality-optimizers/src/trainer.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-optimizers/src/trainer.mixins.js~TrainerMixins.html">TrainerMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2956 byte</td>
+      <td style="display: none;" data-ice="lines">87</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 11:46:59 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Image/boxScaling.js.html">packages/causality-preprocessing/src/Image/boxScaling.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-boxScaling">boxScaling</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1467 byte</td>
+      <td style="display: none;" data-ice="lines">59</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 05:55:36 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Image/colorTransforming.mixins.js.html">packages/causality-preprocessing/src/Image/colorTransforming.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/Image/colorTransforming.mixins.js~ColorTransformingMixins.html">ColorTransformingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1080 byte</td>
+      <td style="display: none;" data-ice="lines">29</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 12:01:52 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Image/imageScaling.mixins.js.html">packages/causality-preprocessing/src/Image/imageScaling.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/Image/imageScaling.mixins.js~ImageScalingMixins.html">ImageScalingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">687 byte</td>
+      <td style="display: none;" data-ice="lines">15</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 06:11:55 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Image/imageSplitting.mixins.js.html">packages/causality-preprocessing/src/Image/imageSplitting.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/Image/imageSplitting.mixins.js~ImageSplittingMixins.html">ImageSplittingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">465 byte</td>
+      <td style="display: none;" data-ice="lines">12</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Image/index.js.html">packages/causality-preprocessing/src/Image/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">223 byte</td>
+      <td style="display: none;" data-ice="lines">2</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 05:51:52 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/NLP/index.js.html">packages/causality-preprocessing/src/NLP/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">79 byte</td>
+      
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/NLP/tokenTransforming.mixins.js.html">packages/causality-preprocessing/src/NLP/tokenTransforming.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/NLP/tokenTransforming.mixins.js~TokenTransformingMixins.html">TokenTransformingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1742 byte</td>
+      <td style="display: none;" data-ice="lines">49</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Tabular/categoryNormalizing.mixins.js.html">packages/causality-preprocessing/src/Tabular/categoryNormalizing.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/Tabular/categoryNormalizing.mixins.js~CategoryNormalizingMixins.html">CategoryNormalizingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">409 byte</td>
+      <td style="display: none;" data-ice="lines">15</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 08:08:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Tabular/continuousNormalizing.mixins.js.html">packages/causality-preprocessing/src/Tabular/continuousNormalizing.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/Tabular/continuousNormalizing.mixins.js~ItemNormalizingMixins.html">ItemNormalizingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">227 byte</td>
+      <td style="display: none;" data-ice="lines">9</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 08:02:00 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Tabular/index.js.html">packages/causality-preprocessing/src/Tabular/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">85 byte</td>
+      
+      <td style="display: none;" data-ice="updated">2019-04-06 08:02:35 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Tokenizer/index.js.html">packages/causality-preprocessing/src/Tokenizer/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">116 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 15:59:40 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Tokenizer/sentencePiece.js.html">packages/causality-preprocessing/src/Tokenizer/sentencePiece.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/sentencePiece.js~SentencePieceTokenizer.html">SentencePieceTokenizer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">3049 byte</td>
+      <td style="display: none;" data-ice="lines">115</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 16:04:26 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Tokenizer/tokenizer.js.html">packages/causality-preprocessing/src/Tokenizer/tokenizer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/tokenizer.js~Tokenizer.html">Tokenizer</a></span>
+<span><a href="variable/index.html#static-variable-tokenizer">tokenizer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">917 byte</td>
+      <td style="display: none;" data-ice="lines">35</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 05:14:57 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Tokenizer/trie.js.html">packages/causality-preprocessing/src/Tokenizer/trie.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/Tokenizer/trie.js~Trie.html">Trie</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2102 byte</td>
+      <td style="display: none;" data-ice="lines">96</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 16:00:24 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/Tokenizer/utils.js.html">packages/causality-preprocessing/src/Tokenizer/utils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-stringToChars">stringToChars</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">179 byte</td>
+      <td style="display: none;" data-ice="lines">7</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 15:21:06 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/causalNetPreprocessingStream.js.html">packages/causality-preprocessing/src/causalNetPreprocessingStream.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/causalNetPreprocessingStream.js~CausalNetPreprocessingStream.html">CausalNetPreprocessingStream</a></span>
+<span><a href="variable/index.html#static-variable-causalNetPreprocessingStream">causalNetPreprocessingStream</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">6352 byte</td>
+      <td style="display: none;" data-ice="lines">166</td>
+      <td style="display: none;" data-ice="updated">2019-05-06 07:03:49 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/imagePreprocessing.js.html">packages/causality-preprocessing/src/imagePreprocessing.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/imagePreprocessing.js~ImagePreprocessing.html">ImagePreprocessing</a></span>
+<span><a href="variable/index.html#static-variable-imagePreprocessing">imagePreprocessing</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">733 byte</td>
+      <td style="display: none;" data-ice="lines">23</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 05:52:03 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/index.js.html">packages/causality-preprocessing/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">420 byte</td>
+      <td style="display: none;" data-ice="lines">7</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 16:01:10 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/nlpPreprocessing.js.html">packages/causality-preprocessing/src/nlpPreprocessing.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/nlpPreprocessing.js~NLPPreprocessing.html">NLPPreprocessing</a></span>
+<span><a href="variable/index.html#static-variable-nLPPreprocessing">nLPPreprocessing</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1265 byte</td>
+      <td style="display: none;" data-ice="lines">47</td>
+      <td style="display: none;" data-ice="updated">2019-03-02 06:12:05 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/preprocessing.mixins.js.html">packages/causality-preprocessing/src/preprocessing.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/preprocessing.mixins.js~PreprocessingMixins.html">PreprocessingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1964 byte</td>
+      <td style="display: none;" data-ice="lines">45</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 07:17:46 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-preprocessing/src/tabularPreprocessing.js.html">packages/causality-preprocessing/src/tabularPreprocessing.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-preprocessing/src/tabularPreprocessing.js~TabularPreprocessing.html">TabularPreprocessing</a></span>
+<span><a href="variable/index.html#static-variable-tabularPreprocessing">tabularPreprocessing</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">349 byte</td>
+      <td style="display: none;" data-ice="lines">10</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 08:02:49 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/Lookup/chunkLookup.mixins.js.html">packages/causality-representation/src/Lookup/chunkLookup.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/Lookup/chunkLookup.mixins.js~ChunkLookupMixins.html">ChunkLookupMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1856 byte</td>
+      <td style="display: none;" data-ice="lines">50</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/Lookup/index.js.html">packages/causality-representation/src/Lookup/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">137 byte</td>
+      <td style="display: none;" data-ice="lines">1</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/Lookup/tokenLookup.mixins.js.html">packages/causality-representation/src/Lookup/tokenLookup.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/Lookup/tokenLookup.mixins.js~TokenLookUpMixins.html">TokenLookUpMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">891 byte</td>
+      <td style="display: none;" data-ice="lines">27</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 14:49:38 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/causalNetEmbedding.js.html">packages/causality-representation/src/causalNetEmbedding.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/causalNetEmbedding.js~CausalNetEmbedding.html">CausalNetEmbedding</a></span>
+<span><a href="variable/index.html#static-variable-causalNetEmbedding">causalNetEmbedding</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4406 byte</td>
+      <td style="display: none;" data-ice="lines">122</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 04:46:10 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/functor.js.html">packages/causality-representation/src/functor.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/functor.js~Functor.html">Functor</a></span>
+<span><a href="variable/index.html#static-variable-functor">functor</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">495 byte</td>
+      <td style="display: none;" data-ice="lines">17</td>
+      <td style="display: none;" data-ice="updated">2019-03-02 05:18:05 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/index.js.html">packages/causality-representation/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">439 byte</td>
+      <td style="display: none;" data-ice="lines">5</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/representation.mixins.js.html">packages/causality-representation/src/representation.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/representation.mixins.js~RepresentationMixins.html">RepresentationMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1905 byte</td>
+      <td style="display: none;" data-ice="lines">55</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 12:13:49 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/universalEmbedding.js.html">packages/causality-representation/src/universalEmbedding.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/universalEmbedding.js~UniversalEmbedding.html">UniversalEmbedding</a></span>
+<span><a href="variable/index.html#static-variable-universalEmbedding">universalEmbedding</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2003 byte</td>
+      <td style="display: none;" data-ice="lines">63</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 13:28:57 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/vectorMetrics.mixins.js.html">packages/causality-representation/src/vectorMetrics.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/vectorMetrics.mixins.js~VectorMetricMixins.html">VectorMetricMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">717 byte</td>
+      <td style="display: none;" data-ice="lines">21</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 05:08:53 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/wordEmbedding.mixins.js.html">packages/causality-representation/src/wordEmbedding.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/wordEmbedding.mixins.js~WordEmbeddingMixins.html">WordEmbeddingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">3474 byte</td>
+      <td style="display: none;" data-ice="lines">94</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 04:46:22 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-representation/src/wordEmbeddingFunctor.mixins.js.html">packages/causality-representation/src/wordEmbeddingFunctor.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-representation/src/wordEmbeddingFunctor.mixins.js~WordEmbeddingFunctorMixins.html">WordEmbeddingFunctorMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1017 byte</td>
+      <td style="display: none;" data-ice="lines">28</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 04:45:32 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-sampling/src/causalNetSampling.js.html">packages/causality-sampling/src/causalNetSampling.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-sampling/src/causalNetSampling.js~CausalNetSampling.html">CausalNetSampling</a></span>
+<span><a href="variable/index.html#static-variable-causalNetSampling">causalNetSampling</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">777 byte</td>
+      <td style="display: none;" data-ice="lines">23</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 12:08:53 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-sampling/src/index.js.html">packages/causality-sampling/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">269 byte</td>
+      <td style="display: none;" data-ice="lines">4</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-sampling/src/negSampling.mixins.js.html">packages/causality-sampling/src/negSampling.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-sampling/src/negSampling.mixins.js~NegativeSamplingMixins.html">NegativeSamplingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1916 byte</td>
+      <td style="display: none;" data-ice="lines">41</td>
+      <td style="display: none;" data-ice="updated">2019-03-04 04:18:35 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-sampling/src/sampling.mixins.js.html">packages/causality-sampling/src/sampling.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-sampling/src/sampling.mixins.js~SamplingMixins.html">SamplingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">729 byte</td>
+      <td style="display: none;" data-ice="lines">30</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-sampling/src/subSampling.mixins.js.html">packages/causality-sampling/src/subSampling.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-sampling/src/subSampling.mixins.js~SubSamplingMixins.html">SubSamplingMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1311 byte</td>
+      <td style="display: none;" data-ice="lines">29</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-storage/src/CSVFile.mixins.js.html">packages/causality-storage/src/CSVFile.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-storage/src/CSVFile.mixins.js~CSVFileMixins.html">CSVFileMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1163 byte</td>
+      <td style="display: none;" data-ice="lines">36</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-storage/src/PNGFile.mixins.js.html">packages/causality-storage/src/PNGFile.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-storage/src/PNGFile.mixins.js~PNGFileMixins.html">PNGFileMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1315 byte</td>
+      <td style="display: none;" data-ice="lines">37</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-storage/src/index.js.html">packages/causality-storage/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">312 byte</td>
+      <td style="display: none;" data-ice="lines">9</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-storage/src/indexDBStorage.js.html">packages/causality-storage/src/indexDBStorage.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-storage/src/indexDBStorage.js~IndexDBStorage.html">IndexDBStorage</a></span>
+<span><a href="variable/index.html#static-variable-indexDBStorage">indexDBStorage</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2973 byte</td>
+      <td style="display: none;" data-ice="lines">79</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 05:50:30 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-storage/src/indexDBStorage.mixins.node.js.html">packages/causality-storage/src/indexDBStorage.mixins.node.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-storage/src/indexDBStorage.mixins.node.js~LevelDownMixins.html">LevelDownMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">914 byte</td>
+      <td style="display: none;" data-ice="lines">27</td>
+      <td style="display: none;" data-ice="updated">2019-05-05 07:54:50 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-storage/src/indexDBStorage.mixins.web.js.html">packages/causality-storage/src/indexDBStorage.mixins.web.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-storage/src/indexDBStorage.mixins.web.js~LevelJSMixins.html">LevelJSMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">697 byte</td>
+      <td style="display: none;" data-ice="lines">20</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-storage/src/storage.mixins.js.html">packages/causality-storage/src/storage.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-storage/src/storage.mixins.js~StorageMixins.html">StorageMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1329 byte</td>
+      <td style="display: none;" data-ice="lines">44</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-storage/src/textFile.mixins.js.html">packages/causality-storage/src/textFile.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-storage/src/textFile.mixins.js~TextFileMixins.html">TextFileMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">890 byte</td>
+      <td style="display: none;" data-ice="lines">31</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/assert.js.html">packages/causality-utils/src/assert.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/assert.js~Assert.html">Assert</a></span>
+<span><a href="variable/index.html#static-variable-assert">assert</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2357 byte</td>
+      <td style="display: none;" data-ice="lines">67</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 08:17:46 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/bufferUtils.js.html">packages/causality-utils/src/bufferUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/bufferUtils.js~BufferUtils.html">BufferUtils</a></span>
+<span><a href="variable/index.html#static-variable-bufferUtils">bufferUtils</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2061 byte</td>
+      <td style="display: none;" data-ice="lines">74</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 10:16:44 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/csvUtils.js.html">packages/causality-utils/src/csvUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/csvUtils.js~CSVUtils.html">CSVUtils</a></span>
+<span><a href="variable/index.html#static-variable-cSVUtils">cSVUtils</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">3816 byte</td>
+      <td style="display: none;" data-ice="lines">111</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 15:24:26 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/fetch.js.html">packages/causality-utils/src/fetch.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/fetch.js~Fetch.html">Fetch</a></span>
+<span><a href="variable/index.html#static-variable-fetch">fetch</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1615 byte</td>
+      <td style="display: none;" data-ice="lines">56</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 12:30:46 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/fetchStreamMixins.node.js.html">packages/causality-utils/src/fetchStreamMixins.node.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/fetchStreamMixins.node.js~NodeStreamMixins.html">NodeStreamMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">624 byte</td>
+      <td style="display: none;" data-ice="lines">21</td>
+      <td style="display: none;" data-ice="updated">2019-03-05 09:39:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/fetchStreamMixins.web.js.html">packages/causality-utils/src/fetchStreamMixins.web.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/fetchStreamMixins.web.js~WebStreamMixins.html">WebStreamMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1557 byte</td>
+      <td style="display: none;" data-ice="lines">49</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 12:29:45 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/index.js.html">packages/causality-utils/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">395 byte</td>
+      <td style="display: none;" data-ice="lines">9</td>
+      <td style="display: none;" data-ice="updated">2019-04-02 09:06:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/jsonUtils.js.html">packages/causality-utils/src/jsonUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/jsonUtils.js~JSONUtils.html">JSONUtils</a></span>
+<span><a href="variable/index.html#static-variable-jsonUtils">jsonUtils</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2542 byte</td>
+      <td style="display: none;" data-ice="lines">93</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 15:39:01 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/platform.js.html">packages/causality-utils/src/platform.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/platform.js~Platform.html">Platform</a></span>
+<span><a href="variable/index.html#static-variable-platform">platform</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1980 byte</td>
+      <td style="display: none;" data-ice="lines">76</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 08:14:22 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/pngUtils.js.html">packages/causality-utils/src/pngUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/pngUtils.js~PNGUtils.html">PNGUtils</a></span>
+<span><a href="variable/index.html#static-variable-pNGUtils">pNGUtils</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2805 byte</td>
+      <td style="display: none;" data-ice="lines">83</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 08:14:00 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality-utils/src/stream.js.html">packages/causality-utils/src/stream.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality-utils/src/stream.js~Stream.html">Stream</a></span>
+<span><a href="variable/index.html#static-variable-streamUtils">streamUtils</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2955 byte</td>
+      <td style="display: none;" data-ice="lines">90</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 10:05:17 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality/src/Ensemble/ensembleDeployment.mixins.js.html">packages/causality/src/Ensemble/ensembleDeployment.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality/src/Ensemble/ensembleDeployment.mixins.js~EnsembleDeploymentMixins.html">EnsembleDeploymentMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1599 byte</td>
+      <td style="display: none;" data-ice="lines">47</td>
+      <td style="display: none;" data-ice="updated">2019-05-06 07:27:12 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality/src/Ensemble/ensembleEvaluator.mixins.js.html">packages/causality/src/Ensemble/ensembleEvaluator.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality/src/Ensemble/ensembleEvaluator.mixins.js~EnsembleEvaluatorMixins.html">EnsembleEvaluatorMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">233 byte</td>
+      <td style="display: none;" data-ice="lines">5</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality/src/Ensemble/ensembleModel.mixins.js.html">packages/causality/src/Ensemble/ensembleModel.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality/src/Ensemble/ensembleModel.mixins.js~EnsembleModelMixins.html">EnsembleModelMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1083 byte</td>
+      <td style="display: none;" data-ice="lines">35</td>
+      <td style="display: none;" data-ice="updated">2019-05-06 07:17:00 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality/src/Ensemble/ensembleTrainer.mixins.js.html">packages/causality/src/Ensemble/ensembleTrainer.mixins.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality/src/Ensemble/ensembleTrainer.mixins.js~EnsembleTrainerMixins.html">EnsembleTrainerMixins</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">871 byte</td>
+      <td style="display: none;" data-ice="lines">21</td>
+      <td style="display: none;" data-ice="updated">2019-04-06 05:28:46 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality/src/Ensemble/index.js.html">packages/causality/src/Ensemble/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">316 byte</td>
+      <td style="display: none;" data-ice="lines">3</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality/src/causalNet.js.html">packages/causality/src/causalNet.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality/src/causalNet.js~CausalNet.html">CausalNet</a></span>
+<span><a href="variable/index.html#static-variable-causalNet">causalNet</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2584 byte</td>
+      <td style="display: none;" data-ice="lines">69</td>
+      <td style="display: none;" data-ice="updated">2019-04-05 09:28:15 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality/src/functor.js.html">packages/causality/src/functor.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/packages/causality/src/functor.js~Functor.html">Functor</a></span>
+<span><a href="variable/index.html#static-variable-functor">functor</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">365 byte</td>
+      <td style="display: none;" data-ice="lines">13</td>
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/packages/causality/src/index.js.html">packages/causality/src/index.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">51 byte</td>
+      
+      <td style="display: none;" data-ice="updated">2019-04-04 10:38:21 (UTC)</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
